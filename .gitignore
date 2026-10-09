@@ -1,0 +1,4 @@
+node_modules/
+.env
+employees.db
+*.log

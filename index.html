@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EmployeeHub | Admin Login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="login-container">
+
+        <div class="logo">
+            <div class="logo-icon">⚡</div>
+
+            <h1>EMPLOYEE<span>HUB</span></h1>
+
+            <p>ADMIN MANAGEMENT PORTAL</p>
+        </div>
+
+        <div class="login-card">
+
+            <h2>Admin Login</h2>
+
+            <p class="subtitle">
+                Sign in to manage employee records.
+            </p>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <label>USERNAME</label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter admin username"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label>PASSWORD</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter password"
+                        required
+                    >
+                </div>
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+                    ⚡ LOGIN AS ADMIN
+                </button>
+
+                <p
+                    id="loginMessage"
+                    class="message"
+                ></p>
+
+            </form>
+
+            <div class="demo-info">
+                <strong>Demo Admin</strong>
+
+                <p>Username: admin</p>
+                <p>Password: admin123</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

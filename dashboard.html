@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EmployeeHub | Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <header class="topbar">
+
+        <div class="brand">
+            ⚡ EMPLOYEE<span>HUB</span>
+        </div>
+
+        <div class="admin-area">
+
+            <span>
+                Admin:
+                <strong id="adminName">Admin</strong>
+            </span>
+
+            <button
+                id="logoutButton"
+                class="logout-button"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main class="dashboard">
+
+        <section class="dashboard-header">
+
+            <div>
+                <p class="eyebrow">
+                    ADMINISTRATION PANEL
+                </p>
+
+                <h1>
+                    Employee Management
+                </h1>
+
+                <p class="dashboard-subtitle">
+                    Create, view, update and delete employee records.
+                </p>
+            </div>
+
+            <button
+                id="addEmployeeButton"
+                class="primary-button"
+            >
+                + ADD EMPLOYEE
+            </button>
+
+        </section>
+
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>Total Employees</span>
+                <strong id="totalEmployees">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Departments</span>
+                <strong id="totalDepartments">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>System Status</span>
+                <strong class="status-online">
+                    ● ONLINE
+                </strong>
+            </div>
+
+        </section>
+
+
+        <section class="table-card">
+
+            <div class="table-header">
+
+                <h2>Employee Records</h2>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="🔍 Search employees..."
+                >
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>NAME</th>
+                            <th>EMAIL</th>
+                            <th>PHONE</th>
+                            <th>DEPARTMENT</th>
+                            <th>POSITION</th>
+                            <th>SALARY</th>
+                            <th>ACTIONS</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="employeeTableBody">
+
+                    </tbody>
+
+                </table>
+
+                <div
+                    id="emptyState"
+                    class="empty-state"
+                >
+                    No employee records found.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Employee Modal -->
+
+    <div
+        id="employeeModal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2 id="modalTitle">
+                    Add Employee
+                </h2>
+
+                <button
+                    id="closeModal"
+                    class="close-button"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="employeeForm">
+
+                <input
+                    type="hidden"
+                    id="employeeId"
+                >
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+
+                        <label>FULL NAME</label>
+
+                        <input
+                            type="text"
+                            id="employeeName"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>EMAIL</label>
+
+                        <input
+                            type="email"
+                            id="employeeEmail"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>PHONE</label>
+
+                        <input
+                            type="text"
+                            id="employeePhone"
+                            maxlength="10"
+                            placeholder="10 digit number"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>DEPARTMENT</label>
+
+                        <select
+                            id="employeeDepartment"
+                            required
+                        >
+
+                            <option value="">
+                                Select Department
+                            </option>
+
+                            <option value="IT">
+                                IT
+                            </option>
+
+                            <option value="HR">
+                                HR
+                            </option>
+
+                            <option value="Finance">
+                                Finance
+                            </option>
+
+                            <option value="Marketing">
+                                Marketing
+                            </option>
+
+                            <option value="Operations">
+                                Operations
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>POSITION</label>
+
+                        <input
+                            type="text"
+                            id="employeePosition"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>SALARY</label>
+
+                        <input
+                            type="number"
+                            id="employeeSalary"
+                            min="1"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <p
+                    id="formMessage"
+                    class="message"
+                ></p>
+
+
+                <button
+                    type="submit"
+                    class="primary-button full-width"
+                >
+                    SAVE EMPLOYEE
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
